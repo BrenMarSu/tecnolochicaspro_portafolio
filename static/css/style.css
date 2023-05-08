@@ -439,6 +439,26 @@ h1 {
   color: #362F2B;
 }
 
+.custom-button-lan {
+  color: white;
+  background-color: #362F2B;
+  border: none;
+  padding: 10px 20px;
+  align-items: right;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.custom-button-lan:hover {
+  background-color: #FFDBC5;
+  color: #362F2B;
+}
+
+.dropdown-menu {
+  min-width: 50px; /* Ajusta el valor según tus necesidades */
+}
 /*
 .contacto .descripcion {
   color: white;

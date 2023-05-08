@@ -40,6 +40,10 @@ app.config['MAIL_PASSWORD'] = mail_password
 def index():
     return render_template('index.html')
 
+@app.route('/es')
+def index2():
+    return render_template('es/index.html')
+
 @app.route('/guardar', methods=['POST'])
 def guardar():
     nombre = request.form['nombre']
