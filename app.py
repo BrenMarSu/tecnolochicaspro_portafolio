@@ -84,6 +84,6 @@ def enviar_correo(nombre, correo, mensaje):
     mail.send(msg)
 
 
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+#ejecucion local
+#if __name__ == '__main__':
+#    app.run()
