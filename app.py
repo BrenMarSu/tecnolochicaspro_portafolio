@@ -61,6 +61,19 @@ def guardar():
 
     return redirect(url_for('index', enviado='true'))
 
+@app.route('/guardar-es', methods=['POST'])
+def guardar2():
+    nombre = request.form['nombre']
+    email = request.form['correo']
+    mensaje = request.form['mensaje'] 
+
+    # Guardar los datos en la base de datos
+    data = {'nombre': nombre, 'email': email, 'mensaje': mensaje}
+    collection.insert_one(data)
+    enviar_correo(nombre, email, mensaje)
+
+    return redirect(url_for('index2', enviado='true'))
+
 #envio de correo
 mail = Mail(app)
 def enviar_correo(nombre, correo, mensaje):
@@ -73,4 +86,4 @@ def enviar_correo(nombre, correo, mensaje):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
