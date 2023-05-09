@@ -12,7 +12,20 @@ typewriter
   .pauseFor(200)
   .deleteChars(10)
   .start();
+ 
+  let app2 = document.getElementById('typewriter2');
 
+  let typewriter2 = new Typewriter(app2, {
+    loop: true,
+    delay: 75,
+  });
+  
+  typewriter2
+    .pauseFor(2500)
+    .typeString('<span style="color:#8D7C74">Developer | ICT Engineer Student</span>')
+    .pauseFor(200)
+    .deleteChars(10)
+    .start();
 
 // Función para mostrar la alerta al recargar la página
 function mostrarAlerta() {
@@ -38,7 +51,16 @@ function mostrarAlerta() {
   alerta.style.display = 'none';
 }
 
+function changeLanguage(lang) {
+  let url = '';
+  if (lang === 'es') {
+    url = '/es';
+  } else if (lang === 'en') {
+    url = '/';
+  }
+  console.log(lang)
+  window.location.href = url;
+}
+
 // Llamar a la función mostrarAlerta cuando se cargue la página
 window.addEventListener('load', mostrarAlerta);
-
-

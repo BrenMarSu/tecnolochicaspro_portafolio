@@ -12,6 +12,10 @@ load_dotenv()
 
 
 # Obtener los valores de las variables de entorno
+mongo_username = os.environ.get('MONGO_USERNAME')
+mongo_password = os.environ.get('MONGO_PASSWORD')
+mongo_cluster = os.environ.get('MONGO_CLUSTER')
+
 mongo_uri = os.environ.get('MONGO_URI')
 db_name = os.environ.get('DB_NAME')
 collection_name = os.environ.get('COLLECTION_NAME')
@@ -39,6 +43,10 @@ app.config['MAIL_PASSWORD'] = mail_password
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/es')
+def index2():
+    return render_template('es/index.html')
 
 @app.route('/guardar', methods=['POST'])
 def guardar():
