@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadatos -->
+    <meta charset="utf-8">
+    <meta name="author" content="Brenda Maraver">
+    <meta name="description" content="Portafolio de desarrollo web de Brenda Maraver">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap, Github, Git, Brenda Maraver, HTML5, Frontend, CSS3, Python, Flask">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Titulo -->
+    <!-- Posible botón para cambio de idioma -->
+    <!-- Posible botón para cambio de TEMA A OSCURO CON LA LUNA DE SIEMPRE O EL SOL -->
+    <title>Brenda Maraver | Developer</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="static/imagenes/icono.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- CSS -->
+    <link href="static\css\style.css" rel="stylesheet">
+    <!-- Flag icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/css/flag-icon.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@0,300;0,400;1,400&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Alerta -->
+    <div class="alert alert-success" role="alert" id="successAlert" style="display: none;">
+      The data has been saved successfully!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar" onclick="cerrarAlerta()"></button>
+    </div>
+    
+    <!-- Barra de navegacion -->
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-toggler">
+          <a class="navbar-brand" href="#">
+            <img src="static/imagenes/iconoOscuro.png" width="70" alt="Logo de la página web">
+          </a>
+          <ul class="navbar-nav d-flex justify-content-center align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#sobre-mi">About me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#proyectos">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#habilidades">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#certificaciones">Certifications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contact</a>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle custom-button-lan" type="button" id="languageBtn" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-globe"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="languageBtn">
+                  <li><a class="dropdown-item" href=# onclick="changeLanguage('es')"><i class="flag-icon flag-icon-es"></i></a></li>
+                  <li><a class="dropdown-item" href=# onclick="changeLanguage('en')"><i class="flag-icon flag-icon-us"></i></a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Seccion Hero -->
+    <section class="hero align-items-stretch">
+      <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
+        <img class="hero-imagen-desarrollador rounded-circle" src="static/imagenes/Brenda foto.png" alt="Foto Brenda Maraver">
+        <h1>Hi, I'm Brenda Maraver</h1>
+        <!--<h2>Desarrollo sitios web y escribo artículos sobre programación.</h2>-->
+
+        <!--Animación con JavaScript-->
+        <h2 class="text-primary mb-4" id="typewriter2"></h2>
+      </div>
+      <!--Imágen
+      <div class="hero-inferior">
+        <img class="hero-inferior-imagen img-fluid" src="static/imagenes/hero-inferior.svg" alt="Monitor, laptop y logos de HTML, CSS, JavaScript y React.">
+      </div>-->
+    </section>
+
+    <!-- Sobre mi -->
+    <section id="sobre-mi" class="sobre-mi seccion-oscura">
+      <div class="contenedor">
+        <h2 class="seccion-titulo">Introducing Brenda Maraver</h2>
+        <p class="seccion-sobremi">I'm a student majoring in Information Technology Engineering in my final semesters. I'm actively looking for an internship or trainee position to apply and improve my skills as a developer. I have hands-on experience in programming with Python and Django, but I'm also open to exploring other potential opportunities that may come my way.</p>
+      </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section class="experiencia seccion-oscura">
+      <div class="container text-center">
+        <div class="row">
+          <!-- Desarrollo Web -->
+          <div class="columna col-12 col-md-4">
+            <i class="bi bi-laptop"></i>
+            <p class="experiencia-titulo">Back-End</p>
+            <p class="seccion-texto">I was part of the development team for a REST API using the SCRUM methodology, implementing HTTP methods and building CRUD operations with their corresponding endpoints. Additionally, I have experience using Flask for creating dynamic web pages.</p>
+            <div class="badges-contenedor">
+              <span class="badge">Python</span>
+              <span class="badge">Django</span>
+              <span class="badge">Flask</span>
+              <span class="badge">Scrum</span>
+            </div>
+          </div>
+          <!-- Articulos -->
+          <div class="columna col-12 col-md-4">
+            <i class="bi bi-laptop"></i>
+            <p class="experiencia-titulo">Front-End</p>
+            <p class="seccion-texto">I attended a Front-End web developer bootcamp where I was able to apply my knowledge in creating a dynamic website focused on academic queries. Additionally, I utilized what I learned in the bootcamp to develop this portfolio.</p>
+            <div class="badges-contenedor">
+              <span class="badge">HTML</span>
+              <span class="badge" >CSS</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">Bootstrap</span>
+            </div>
+          </div>
+          <!-- Estudiante -->
+          <div class="columna col-12 col-md-4">
+            <i class="bi bi-laptop"></i>
+            <p class="experiencia-titulo">Data Base</p>
+            <p class="seccion-texto">I have hands-on experience in connecting to and managing databases using PostgreSQL with PgAdmin. I have also worked with the PL/SQL language in Oracle databases and with PHP in conjunction with MySQL, utilizing the respective administration tools. </p>
+            <div class="badges-contenedor">
+              <span class="badge">PostgreSQL</span>
+              <span class="badge">PgAdmin</span>
+              <span class="badge">PL/SQL</span>
+              <span class="badge">PHP</span>
+              <span class="badge">phpMyAdmin</span>
+              <span class="badge">MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
+      <h2 class="seccion-titulo texto-negro">My recent projects</h2>
+      <h3 class="seccion-descripcion">These are some projects that I have recently created...</h3>
+      <!-- Galeria de Proyectos -->
+      <div class="container text-center proyectos-contenedor">
+        <div class="row">
+          <!-- Proyecto 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="static/imagenes/Google Clone.PNG" alt="Proyecto 1, clonación de Google">
+              <div class="overlay">
+                <p>Interface Google Clone</p>
+                <div class="iconos-contenedor">
+                  <a href="https://github.com/BrenMarSu/Google-Clone" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                  </a>
+                  <a href="https://brenmarsu.github.io/Google-Clone/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-laptop"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Proyecto 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="static/imagenes/Sistema-Consulta.PNG" alt="Proyecto 2, Sistema de Consulta Escolar">
+              <div class="overlay">
+                <p>Query system</p>
+                <div class=""><!-- se omitio la clase para que no creara 2 contenedores como en el anterior caso -->
+                  <a href="https://github.com/BrenMarSu/Sistema-Consulta-en-desarrollo" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                  </a>
+                  <!-- pendiente
+                  <a href="#/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-laptop"></i>
+                  </a>  -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Proyecto 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="static/imagenes/proyecto3.png" alt="Proyecto 3, proximamente">
+              <div class="overlay">
+                <p>Coming soon...</p>
+                <!-- Prendiente de agregar
+                <div class="iconos-contenedor">
+                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                  </a>
+                  <a href="#/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-laptop"></i>
+                  </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <!-- Pendiente por agregar Proyecto 4 
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="static/imagenes/proyecto4.png" alt="Proyecto 1">
+              <div class="overlay">
+                <p>Proyecto 4</p>
+                <div class="iconos-contenedor">
+                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-laptop"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- Pendiente por agregar Proyecto 5 
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="static/imagenes/proyecto5.png" alt="Proyecto 1">
+              <div class="overlay">
+                <p>Proyecto 5</p>
+                <div class="iconos-contenedor">
+                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-laptop"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- Pendiente por agregar Proyecto 6 
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="static/imagenes/proyecto6.png" alt="Proyecto 1">
+              <div class="overlay">
+                <p>Proyecto 6</p>
+                <div class="iconos-contenedor">
+                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-laptop"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <a class="link" href="https://github.com/BrenMarSu" target="_blank" rel="noopener noreferrer">
+        <button type="button" class="btn btn-mas seccion-oscura">
+          View more projects
+          <i class="bi bi-arrow-right-circle-fill"></i>
+        </button>
+      </a>
+    </section>
+
+    
+    
+    <!-- Habilidades --> 
+    <section id="habilidades" class="habilidades-relevantes seccion-oscura justify-content-start"> 
+      <h2 class="seccion-titulo">Relevant Skills</h2>
+        <div class="container text-center habilidades-contenedor">
+          <div class="row">
+            <!-- Desarrollo Web -->
+            <div class="columna col-12 col-md-2">
+              <div class="habilidad">
+                <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Python-Dark.svg" alt="Python">
+                  <div class="overlay-habilidad">
+                    <p>Python</p>
+                  </div>
+              </div>
+            </div>
+            <!-- Articulos -->
+            <div class="columna col-12 col-md-2">
+              <div class="habilidad">
+                <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Django.svg" alt="Django">
+                  <div class="overlay-habilidad">
+                    <p>Django</p>
+                  </div>
+              </div>
+            </div>
+            <!-- Estudiante -->
+            <div class="columna col-12 col-md-2">
+              <div class="habilidad">
+                <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Flask-Dark.svg" alt="Flask">
+                  <div class="overlay-habilidad">
+                    <p>Flask</p>
+                  </div>
+              </div>
+            </div>
+            <!-- Desarrollo Web -->
+            <div class="columna col-12 col-md-2">
+              <div class="habilidad">
+                <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Postman.svg" alt="Postman">
+                  <div class="overlay-habilidad">
+                    <p>Postman</p>
+                  </div>
+              </div>
+            </div>
+            <!-- Articulos -->
+            <div class="columna col-12 col-md-2">
+              <div class="habilidad">
+                <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/PostgreSQL-Dark.svg" alt="PostgreSQL">
+                  <div class="overlay-habilidad">
+                    <p>PostgreSQL</p>
+                  </div>
+              </div>
+            </div>
+            <!-- Estudiante -->
+            <div class="columna col-12 col-md-2">
+              <div class="habilidad">
+                <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/MySQL-Dark.svg" alt="MySQL">
+                  <div class="overlay-habilidad">
+                    <p>MySQL</p>
+                  </div>
+              </div>
+            </div>
+            <!-- Desarrollo Web -->
+            <div class="columna col-12 col-md-2">
+              <div class="habilidad">
+                <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/JavaScript.svg" alt="JavaScript">
+                  <div class="overlay-habilidad">
+                    <p>JavaScript</p>
+                  </div>
+              </div>
+            </div>
+            <!-- Articulos -->
+            <div class="columna col-12 col-md-2">
+              <div class="habilidad">
+                <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/HTML.svg" alt="HTML5">
+                  <div class="overlay-habilidad">
+                    <p>HTML5</p>
+                  </div>
+              </div>
+            </div>
+            <!-- Estudiante -->
+            <div class="columna col-12 col-md-2">
+              <div class="habilidad">
+                <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/CSS.svg" alt="CSS3">
+                  <div class="overlay-habilidad">
+                    <p>CSS3</p>
+                  </div>
+              </div>
+            </div>
+            <!-- Desarrollo Web -->
+            <div class="columna col-12 col-md-2">
+              <div class="habilidad">
+                <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Bootstrap.svg" alt="bootstrap">
+                  <div class="overlay-habilidad">
+                    <p>Bootstrap</p>
+                  </div>
+              </div>
+            </div>
+            <!-- Articulos -->
+            <div class="columna col-12 col-md-2">
+              <div class="habilidad">
+                <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Git.svg" alt="Git">
+                  <div class="overlay-habilidad">
+                    <p>Git</p>
+                  </div>
+              </div>
+            </div>
+            <!-- Estudiante -->
+            <div class="columna col-12 col-md-2">
+              <div class="habilidad">
+                <img src="https://github.com/tandpfun/skill-icons/raw/main/icons/Github-Dark.svg" alt="Github">
+                  <div class="overlay-habilidad">
+                    <p>Github</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+
+    <!--Certificaciones y Logros -->
+    <section id="certificaciones" class="certificados seccion-clara">
+      <h2 class="seccion-titulo">Certifications</h2>
+      <h3 class="seccion-descripcion">These are some of my certificates and achievements...</h3> 
+      
+      <!--Carrusel -->
+      <div id="certificados-carrusel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class=" certi container">
+              <img class="certificados-imagen" src="static/imagenes/Concurso.jpg" alt="Segundo lugar en el concurso de programación nivel avanzado">
+              <div class="overlay-certificado">
+                <div class=""><!-- se omitio la clase para que no creara 2 contenedores como en el anterior caso -->
+                  <a href="https://i.pinimg.com/originals/0b/a8/4a/0ba84a2e5e4dd18673bb9dcef2793dc2.jpg" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-eye-fill"></i>
+                  </a>
+                  <!-- pendiente
+                  <a href="#/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-laptop"></i>
+                  </a>  -->
+                </div>
+              <!--<p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed aliquam interdum nisi a placerat.</p>
+              <div class="certificado-info">
+                <p>Segundo Lugar en el concurso de programación nivel avanzado</p>
+                <p class="cargo">Gerente de proyectos en DesarrolloWeb</p>>-->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class=" certi container">
+              <img class="certificados-imagen" src="static/imagenes/Certificado Egg.jpeg" alt="Certificado de programación desde cero con Egg Corporation">
+              <div class="overlay-certificado">
+                <div class=""><!-- se omitio la clase para que no creara 2 contenedores como en el anterior caso -->
+                  <a href="https://production-egg-certificates.s3.amazonaws.com/BrendaMaraverSuarez/programaci%C3%B3ndesdecerolatam/thumbnail_f54ed058d9634316e09d80b8076d6204f7027aba3971f7e595ee220b163552a1.jpeg" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-eye-fill"></i>
+                  </a>
+                  <!-- pendiente
+                  <a href="#/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-laptop"></i>
+                  </a>  -->
+                </div>
+              <!--<p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed aliquam interdum nisi a placerat.</p>
+              <div class="certificado-info">
+                <p>Segundo Lugar en el concurso de programación nivel avanzado</p>
+                <p class="cargo">Gerente de proyectos en DesarrolloWeb</p>>-->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class=" certi container">
+              <img class="certificados-imagen" src="static/imagenes/Certificado Hackademy.jpg" alt="Certificación de finalización de Bootcamp Skills for Women in Tech">
+              <div class="overlay-certificado">
+                <div class=""><!-- se omitio la clase para que no creara 2 contenedores como en el anterior caso -->
+                  <a href="https://drive.google.com/file/d/1s0lVDeC_A9BsLS9k5ftthYdIgr7Yi-w-/view" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-eye-fill"></i>
+                  </a>
+                  <!-- pendiente
+                  <a href="#/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-laptop"></i>
+                  </a>  -->
+                </div>
+              <!--<p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed aliquam interdum nisi a placerat.</p>
+              <div class="certificado-info">
+                <p>Segundo Lugar en el concurso de programación nivel avanzado</p>
+                <p class="cargo">Gerente de proyectos en DesarrolloWeb</p>>-->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class=" certi container">
+              <img class="certificados-imagen" src="static/imagenes/EF SET Certificate.jpg" alt="Certificado EF nivel C1">
+              <div class="overlay-certificado">
+                <div class=""><!-- se omitio la clase para que no creara 2 contenedores como en el anterior caso -->
+                  <a href="https://www.efset.org/cert/YhbzNz" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-eye-fill"></i>
+                  </a>
+                  <!-- pendiente
+                  <a href="#/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-laptop"></i>
+                  </a>  -->
+                </div>
+              <!--<p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed aliquam interdum nisi a placerat.</p>
+              <div class="certificado-info">
+                <p>Segundo Lugar en el concurso de programación nivel avanzado</p>
+                <p class="cargo">Gerente de proyectos en DesarrolloWeb</p>>-->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class=" certi container">
+              <img class="certificados-imagen" src="static/imagenes/Constancia DD4W_2022.jpg" alt="Constancia de participación a Dev Day for Women 2022">
+              <div class="overlay-certificado">
+                <div class=""><!-- se omitio la clase para que no creara 2 contenedores como en el anterior caso -->
+                  <a href="https://constancias.sg.com.mx/dd4w20221/participantes/BrendaMaraverSu%C3%A1rez.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-eye-fill"></i>
+                  </a>
+                  <!-- pendiente
+                  <a href="#/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-laptop"></i>
+                  </a>  -->
+                </div>
+              <!--<p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed aliquam interdum nisi a placerat.</p>
+              <div class="certificado-info">
+                <p>Segundo Lugar en el concurso de programación nivel avanzado</p>
+                <p class="cargo">Gerente de proyectos en DesarrolloWeb</p>>-->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class=" certi container">
+              <img class="certificados-imagen" src="static/imagenes/Certificado Ingles.jpg" alt="Certificado de peurba de ingles Voxy nivel intermedio avanzado">
+              <div class="overlay-certificado">
+                <div class=""><!-- se omitio la clase para que no creara 2 contenedores como en el anterior caso -->
+                  <a href="https://app.voxy.com/certificates/proficiency-test/61534b7fe08c280c8fe4e068/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-eye-fill"></i>
+                  </a>
+                  <!-- pendiente
+                  <a href="#/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-laptop"></i>
+                  </a>  -->
+                </div>
+              <!--<p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed aliquam interdum nisi a placerat.</p>
+              <div class="certificado-info">
+                <p>Segundo Lugar en el concurso de programación nivel avanzado</p>
+                <p class="cargo">Gerente de proyectos en DesarrolloWeb</p>>-->
+              </div>
+            </div>
+          </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#certificados-carrusel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#certificados-carrusel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contacto seccion-oscura">
+      <div class="container">
+        <div id="contacto"class="container text-center rectangulo d-flex justify-content-evenly">
+          <div class="row">
+            <div class="col-12 col-md-6 seccion-titulo">
+              Contact Me!
+            </div>
+             <!--
+            <div class="col-12 col-md-4 descripcion">
+              Contáctame para iniciar tu proyecto de desarrollo web y haré que tu visión se vuelva realidad.
+            </div> -->
+            <div class="col-12 col-md-4 formulario">
+              <form action="{{url_for('guardar')}}" method="POST">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="nameInput" placeholder="Tu nombre" name="nombre" required>
+                  <label for="nameInput">Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="emailInput" placeholder="name@example.com" name="correo" required>
+                  <label for="floatingInput">Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <textarea class="form-control" id="messageInput" placeholder="Tu mensaje" style="height: 150px" name="mensaje" required></textarea>
+                  <label for="messageInput">Message</label>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary custom-button" type="submit">Enviar</button>
+                </div>
+              </form>
+            </div>
+            
+            <div class="col-12 col-md-2">
+            </div>
+            
+          </div>
+        </div>
+      </div>     
+    </section>
+    
+    <!-- Pie de pagina (footer) -->
+    <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center"> 
+      <img class="footer-logo" src="static/imagenes/icono.png" alt="Logo del portafolio">
+      <p class="footer-texto text-center">Contributing perspectives,<br>appreciating ideas.</p>
+      <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <i class="bi-file-earmark-text"></i>
+        </a>
+        <a href="https://wa.me/522228546270" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+        <a href="https://github.com/BrenMarSu" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/brenmarsu/" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/brenda_marsua" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="mailto:brendamaraver@gmail.com" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-envelope"></i>
+        </a>
+      </div>
+      <div class="derechos-de-autor">Developed by Brenda Maraver (2023) &#169;</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+        <script src="static/main.js"></script>
+  </body>
+</html>
